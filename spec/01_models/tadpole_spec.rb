@@ -25,7 +25,6 @@ describe Tadpole do
     tad = Tadpole.create(:name => "Tad", :color => "maroon5", :frog_id => kermit.id)
 
     updated_walden = Pond.find_by(:name => "Walden")
-
     expect(tad.pond).to eq(updated_walden)
     expect(updated_walden.tadpoles).to include(tad)
   end
