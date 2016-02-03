@@ -40,6 +40,13 @@ class TadpolesController < ApplicationController
     end
   end
 
+  def metamorphosize
+    set_tadpole
+    @frog = Frog.create({:name => @tadpole.name, :color => @tadpole.color, :pond => @tadpole.pond})
+    @tadpole.destroy
+    redirect_to "/frogs/#{@frog.id}"
+  end
+
   def destroy
     @tadpole.destroy
     respond_to do |format|
