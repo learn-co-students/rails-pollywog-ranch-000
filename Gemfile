@@ -48,10 +48,10 @@ group :test, :development do
   gem 'launchy', '~> 2.4.3'
 end
 
-group :production do
-  gem "pg"
-  gem "google-analytics-rails"
-  gem "rails_12factor"
-end
+#group :production do
+#  gem "pg"
+#  gem "google-analytics-rails"
+#  gem "rails_12factor"
+#end
 
 gem "bootstrap-sass", "~> 3.1.1"
